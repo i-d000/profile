@@ -50,27 +50,13 @@
         <?php foreach ($tweets as $tweet) : ?>
             <section>
                 <img src="resource/tweet/<?php echo $tweet['img'] ?>" alt="<?php echo $tweet['img'] ?>" height="100px" width="100px">
-                <h3><?php echo $tweet['title'] ?><span><?php echo $tweet['created_at'] ?></span></h3>
+                <h3><?php echo $tweet['title'] ?><span><?php echo birthdayFormat($tweet['created_at']) ?></span></h3>
                 <pre><?php echo $tweet['content'] ?></pre>
                 <button type="button">fav</button>
             </section>
         <?php endforeach ?>
     </article>
-    <footer>
-        <dl>
-            <a href="">
-                <dt>Home</dt>
-                <dd><img src=""></dd>
-            </a>
-            <a href="">
-                <dt>メンバー</dt>
-                <dd><img src=""></dd>
-            </a><a href="">
-                <dt>DM</dt>
-                <dd><img src=""></dd>
-            </a>
-        </dl>
-    </footer>
+    <?php require_once 'resource/layout/footer.php' ?>
 </body>
 
 </html>

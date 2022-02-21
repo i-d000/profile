@@ -15,14 +15,14 @@ setcookie("id", $id, time() + 60 * 60 * 24 * 30);
 setcookie('password', $hashed, time() + 60 * 60 * 24 * 30);
 // ログイン状態削除
 // setcookie("id", "", time() - 3600);
-var_dump($_COOKIE['id']);
-var_dump(stateCheck($_COOKIE['password']));
+// var_dump($_COOKIE['id']);
+// var_dump(stateCheck($_COOKIE['password']));
 // ログイン状態 表示処理
 if (isset($_COOKIE['id']) && $_COOKIE['id'] === stateCheck($_COOKIE['password'])) {
     $profile = getProfile($_COOKIE['id']);
-    var_dump($profile);
+    // var_dump($profile);
     $tweets = getTweets($_COOKIE['id']);
-    var_dump($tweets);
+    // var_dump($tweets);
 }
 // ログアウト状態
 if (isset($_COOKIE['id']) === NULL || $_COOKIE['id'] !== stateCheck($_COOKIE['password'])) {
