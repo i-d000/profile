@@ -1,28 +1,19 @@
 <?php
+require_once 'setting/const.php';
+require_once 'model/state.check.php';
+// test-data
+$id = 1;
+$hashed = 'a';
+// セッション値
+session_start();
+// cookie値 ログイン状態
+setcookie("id", $id, time() + 60 * 60 * 24 * 30); //有効期間30日
+setcookie('password', $hashed, time() + 60 * 60 * 24 * 30); //有効期間30日
+// ログイン状態削除
+// setcookie("id", "", time() - 3600);
+if (isset($_COOKIE['id']) && $_COOKIE['id'] === stateCheck($_COOKIE['password'])) {
+    echo 'ログイン';
+}
+$_SESSION['id'] = $id;
 
-?>
-<!DOCTYPE html>
-<html lang="jp">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-</head>
-
-<body>
-    <!-- modal -->
-    <form method="post">
-        <label for="pass-word">パスワード</label>
-        <input type="password" id="pass-word" name="password">
-        <label for="e-mail">メールアドレス</label>
-        <input type="mail" id="e-mail" name="email">
-        <label for="comment">コメント</label>
-        <textarea id="comment" name="comment"></textarea>
-    </form>
-    <!-- show -->
-
-</body>
-
-</html>
+require_once 'view/home.php';
