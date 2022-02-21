@@ -8,5 +8,6 @@ function stateCheck($hashed_password)
     $data = $link->prepare($sql);
     $data->bindValue(':password', $hashed_password, PDO::PARAM_INT);
     $data->execute();
-    return $data->fetch(PDO::FETCH_ASSOC);
+    $id = $data->fetch(PDO::FETCH_ASSOC);
+    return $id['id'];
 }

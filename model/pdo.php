@@ -1,4 +1,5 @@
 <?php
+// require_once '../setting/const.php';
 
 function pdoConnect()
 {
@@ -11,5 +12,3 @@ function pdoConnect()
         die('DB接続エラー:' . $err->getMessage());
     }
 }
-
-var_dump(pdoConnect());
