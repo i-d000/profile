@@ -28,6 +28,18 @@ if (isset($_COOKIE['id']) && $_COOKIE['id'] === stateCheck($_COOKIE['password'])
 if (isset($_COOKIE['id']) === NULL || $_COOKIE['id'] !== stateCheck($_COOKIE['password'])) {
 }
 
+// var_dump($_POST);
+// var_dump($_FILES);
 // profile 更新処理
+if (isset($_POST['profile'])) {
+    updateProfile($_POST);
+    header('Location:home.php');
+    exit;
+}
 // tweet 投稿処理
+if (isset($_POST['tweet'])) {
+    insertTweet($_POST, $_FILES['img']['name']);
+    header('Location:home.php');
+    exit;
+}
 require_once 'view/home.php';

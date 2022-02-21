@@ -25,6 +25,8 @@
         <input type="text" name="title" id="title">
         <label for="content">本文</label>
         <textarea id="content" name="content" id="content"></textarea>
+        <label for="img">画像</label>
+        <input type="file" id="img" name="img" accept="image/png, image/jpeg,image/gif">
         <button type="submit" name="tweet">tweet投稿ボタン</button>
     </form>
 
