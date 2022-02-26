@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロフィール画面</title>
+  <link rel="stylesheet" href="./css/destyle.css">
+  <link rel="stylesheet" href="./css/profile.css">
+</head>
+<body>
+  <!-- 仮置き画面幅 -->
+  <div id="frame">
+    <!-- 画面最上段の帯 -->
+    <div id="line">
+      <h2>マイページ</h2>
+    </div>
+    <!-- プロフ背景 -->
+    <div id="background-img">
+      <img src="./img/icon.jpg" alt="アイコン画像">
+    </div>
+
+    <!-- プロフィール-->
+    <div id="profile_page">
+        <div id="edit_button">
+          <p id="edit_text">プロフィール編集</p>
+        </div>
+      <div id="profile_name">
+        <h1>宇都宮大輝<span>-明日も元気に-</span></h1>
+      </div>
+      <div id="belong_frame">
+        <p id="belong">HAL大阪IT学科4年制2年</p>
+        <p id="role">role:課題委員</p>
+      </div>
+      <div id="flex_introduce">
+        <p id="introduce">introduce:</p>
+        <p id="introduce_text">春からもHAL、最近楽しいことの連続で生きるのが楽しい。</p>
+      </div>
+      <p id="birth">誕生日：yyyy年mm月dd日</p>
+    </div>
+
+    <!-- モーダルエリアここから -->
+    <section id="modalArea">
+      <!--モーダル削除用のタグ -->
+      <div class="modalBg"></div>
+      <div class="modalWrapper">
+        <div class="modalContents">
+          <div class="profile_icon" id="icon_good">
+            <img src="./img/icon.jpg" alt="アイコン画像">
+          </div>
+          <form id="submit">
+            <textarea  placeholder="あなたの経験をおしえて" value=""></textarea>
+            <p id="right_button"><button type="submit" id="submit_button">投稿する</button></p>
+          </form>
+        </div>
+        <div class="closeModal">
+          <p>×</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="modalArea2">
+      <!--モーダル削除用のタグ -->
+      <div class="modalBg"></div>
+      <div class="modalWrapper">
+        <div id="flex_closeModal2">
+          <div class="closeModal2"><p>×</p></div>
+          <p id="profile_submit_header">プロフィールを編集</p>
+        </div>
+        <div class="modalContents">
+          </div>
+
+          <form id="submit" class="plus">
+            <p>名前</p>
+            <input type="text" name="name">
+            <p>ステータスメッセージ</p>
+            <input type="text" name="name">
+            <p>役職</p>
+            <input type="text" name="name">
+            <p>自己紹介</p>
+            <textarea  placeholder="自己紹介をお願いします。" value=""></textarea>
+            <p>生年月日</p>
+            <div id="flex_input"><input type="text" name="#"> 年<input type="text" name="#"> 月<input type="text" name="#"> 日</div>
+            <p id="right_button"><button type="submit" id="submit_button">投稿する</button></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+    <!-- モーダルエリアここまで -->
+
+    <!--ツイートボタン-->
+    <p id="tweet_button"><img src="./img/pen.png" alt="編集ボタンの画像"></p>
+
+    <!-- ツイート内容に -->
+    <div class="tweet">
+      <div class="profile_icon">
+        <img src="./img/icon.jpg" alt="アイコン画像">
+      </div>
+      <div class="flex_right">
+        <div class="flex_right_top">
+          <h2>宇都宮大輝</h2>
+          <p>1999年2月21日</p>
+        </div>
+
+        <p>うほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっ</p>
+      </div>
+    </div>
+    <div class="tweet">
+      <div class="profile_icon">
+        <img src="./img/icon.jpg" alt="アイコン画像">
+      </div>
+      <div class="flex_right">
+        <div class="flex_right_top">
+          <h2>宇都宮大輝</h2>
+          <p>1999年2月21日</p>
+        </div>
+
+        <p>うほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっ</p>
+      </div>
+    </div>
+    <div class="tweet">
+      <div class="profile_icon">
+        <img src="./img/icon.jpg" alt="アイコン画像">
+      </div>
+      <div class="flex_right">
+        <div class="flex_right_top">
+          <h2>宇都宮大輝</h2>
+          <p>1999年2月21日</p>
+        </div>
+        <p>うほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっうほっ</p>
+      </div>
+    </div>
+    <div class="tweet">
+      <div class="profile_icon">
+        <img src="./img/icon.jpg" alt="アイコン画像">
+      </div>
+      <div class="flex_right">
+        <div class="flex_right_top">
+          <h2>宇都宮大輝</h2>
+          <p>1999年2月21日</p>
+        </div>
+
+        <p>ツイート内容</p>
+      </div>
+    </div>
+    <div class="tweet">
+      <div class="profile_icon">
+        <img src="./img/icon.jpg" alt="アイコン画像">
+      </div>
+      <div class="flex_right">
+        <div class="flex_right_top">
+          <h2>宇都宮大輝</h2>
+          <p>1999年2月21日</p>
+        </div>
+
+        <p>ツイート内容</p>
+      </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+      <div id="container">
+        <div class="item">
+          <a href="./home.html"><img src="./img/home.png" alt="ホームボタンのロゴ画像"></a>
+        </div>
+        <div class="item">
+          <a href="./member.html"><img src="./img/team.png" alt="メンバーボタンのロゴ画像"></a>
+        </div>
+        <div class="item">
+          <a href="massages.html"><img src="./img/mail_pushed.png" alt="メールボタンのロゴ画像"></a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/profile.js"></script>
+  </div>
+</body>
+</html>

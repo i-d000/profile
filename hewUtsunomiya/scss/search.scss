@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 200;
+  src: url(../fonts/notosansjp/NotoSansJP-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 300;
+  src: url(../fonts/notosansjp/NotoSansJP-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 400;
+  src: url(../fonts/notosansjp/NotoSansJP-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 500;
+  src: url(../fonts/notosansjp/NotoSansJP-Medium.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 600;
+  src: url(../fonts/notosansjp/NotoSansJP-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 900;
+  src: url(../fonts/notosansjp/NotoSansJP-Black.otf) format('opentype');
+}
+
+$font-color: #333;
+$base-color: rgb(250, 179, 48);
+$border-color: rgba(0,0,0,0.3);
+*{
+  font-family: 'notosansjp', "メイリオ", sans-serif;
+  font-weight: 400;
+  color: $font-color;
+}
+/* Small screens - スマホ */
+@media only screen { 
+  #line{
+    height: 40px;
+  }
+  #line > h2{
+    font-weight:600;
+    line-height: 40px;
+    padding-left: 40px;
+  }
+  #header_form{
+    padding-left: 40px;
+    padding-bottom: 15px;
+    border-bottom: solid $border-color 1px;
+  }
+  input{
+    border: solid $border-color 1px;
+    padding:5px;
+    border-radius: 5px;
+  }
+  button{
+    border: solid $border-color 1px;
+    padding:5px;
+    border-radius: 5px;
+  }
+
+  main{
+    padding:10px;
+    padding-top: 10px;
+    margin: 0 auto;
+  }
+  main > h2{
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 20px;
+  }
+  .category_box{
+    margin-bottom: 10px;
+  }
+  .flex_text{
+    display:flex;
+    justify-content: space-between;
+  }
+  .flex_text > h3{
+    border-bottom: solid $border-color 1px;
+    margin-bottom: 10px;
+  }
+  .flex_text > a > P {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .flex_members{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .person{
+    width: 20%;
+    padding: 0px 5px;
+  }
+  .person > a > img{
+    width:100%;
+    height: 80px;
+  }
+  .person > a > p{
+    font-size: 14px;
+    padding: 5px 0px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  footer{
+    padding-top: 50px;
+  }
+  #container{
+    height: 55px;
+    width: 100%;
+    border-top: solid rgba(51,51,51,0.3) 1px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  #container > .item > a{
+    padding: 0px 30px;
+    display: block;
+  }
+  #container > .item >a > img{
+    width: 35px;
+    padding: 10px 0px;
+  }
+
+
+} /* スマホ用のスタイル -モバイルファースト */
+@media only screen and (max-width: 40em) { 
+
+} /* 最大幅640px、スマホ専用のスタイル */
+/* Medium screens - タブレット */
+@media only screen and (min-width: 40.063em) {
+  h2{
+    color: blue;
+  }
+} /* 最小幅641px、Mediumスクリーン */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  h2{
+    color: blue;
+  }
+} /* 最小幅641pxおよび最大幅1024px、タブレット専用のスタイル */
+/* Large screens - デスクトップ */
+@media only screen and (min-width: 64.063em) { 
+  h2{
+    color: green;
+  }
+} /* 最小幅1025px、Largeスクリーン */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* 最小幅1025pxおよび最大幅1440px、Largeスクリーン専用のスタイル */
+
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) { 
+
+} /* 最小幅1441px、XLargeスクリーン */
+ 
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { /* 最小幅1441pxおよび最大幅1920px、XLargeのスクリーン専用のスタイル */
+
+} 
+ 
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) { /* 最小幅1921px、XXLargeスクリーン */
+
+
+} 

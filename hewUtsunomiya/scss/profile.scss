@@ -1,0 +1,386 @@
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 200;
+  src: url(../fonts/notosansjp/NotoSansJP-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 300;
+  src: url(../fonts/notosansjp/NotoSansJP-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 400;
+  src: url(../fonts/notosansjp/NotoSansJP-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 500;
+  src: url(../fonts/notosansjp/NotoSansJP-Medium.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 600;
+  src: url(../fonts/notosansjp/NotoSansJP-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'notosansjp';
+  font-weight: 900;
+  src: url(../fonts/notosansjp/NotoSansJP-Black.otf) format('opentype');
+}
+
+$font-color: #333;
+$base-color: rgb(250, 179, 48);
+
+*{
+  font-family: 'notosansjp', "メイリオ", sans-serif;
+  font-weight: 400;
+  color: $font-color;
+}
+/* Small screens - スマホ */
+@media only screen { 
+  #line{
+    border-bottom: solid #333 1px;
+    height: 40px;
+  }
+  #line > h2{
+    font-weight:600;
+    line-height: 40px;
+    padding-left: 40px;
+  }
+  #background-img{
+    height:150px;
+    width:100%;
+    background-image: url(../img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  #background-img > img{ 
+    height: 80px;
+    width: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    border: solid white 3px;
+  }
+  #profile_page{
+    padding: 10px;
+    border-bottom: solid rgba(51,51,51,0.3) 1px;
+  }
+  #profile_name{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  #profile_name > h1 > span {
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 10px;
+    font-weight: 300;
+  }
+  /* ==================================
+ モーダルCSS 
+ ================================== */
+ #modalArea{
+  display: none;
+  width: 100%;
+  height:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+#modalArea2{
+  display: none;
+  width: 100%;
+  height:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.modalBg{
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.6);
+}
+.modalBg2{
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.6);
+}
+.modalWrapper {
+ width: 90%;
+ max-width: 400px;
+ height: auto;
+ padding: 10px 30px;
+ background-color: white;
+ border-radius:5px;
+ /*モーダルウィンドウを画面の水平垂直の中央に配置*/
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+}
+#icon_good{
+  padding-top: 10px;
+}
+/* モーダル解除のアイコン */
+.closeModal{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+}
+.closeModal2{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+}
+.modalContents{
+  display: flex;
+}
+
+.modalWrapper .modalContents h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.modalWrapper .modalContents p {
+  font-size: 1.2rem;
+  
+  margin-bottom: 10px;
+}
+
+
+#submit > p > #submit_button {
+  width: 120px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  border-radius: 5px;
+  background-color: rgb(250, 179, 48);
+  color: rgba(0,0,0,0.6);
+  text-align: center;
+  
+}
+#submit >  textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+  border: solid rgba(0,0,0,0.6) 1px;
+  border-radius: 10px;
+  padding:20px;
+  margin-bottom: 20px;
+}
+#right_button{
+  text-align: right;
+}
+.modalWrapper .closeModal {
+  cursor: pointer;
+}
+
+#flex_closeModal2{
+  display:flex;
+  border-bottom: solid rgba(0,0,0,0.4) 1px; 
+}
+#profile_submit_header{
+  font-size:16px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.plus{
+  margin-top: 20px;
+}
+/* ==================================
+モーダルfin 
+================================== */
+
+  #edit_button{
+    height: 40px;
+    position: relative;
+  }
+  #edit_text{
+    width: 120px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    float: right;
+    background-color:$base-color;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius:10px;
+    padding: 5px;
+    float: none;
+    cursor: pointer;
+  }
+  #DM{
+    width: 30px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    background-color:$base-color;
+    border-radius:10px;
+    float: none;
+  }
+  #edit_button > a > p > img{
+    width:30px;
+    
+
+  }
+  #belong{
+    font-size:14px;
+    font-weight: 500;
+  }
+  #role{
+    font-size:14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  #flex_introduce{
+    display: flex;
+  }
+  #introduce{
+    font-size:14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  #introduce_text{
+    font-size:14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  #birth{
+    font-size:14px;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  #tweet_button{
+    cursor: pointer;
+  }
+  #tweet_button > img{
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    background-color:rgb(250, 179, 48);
+    position: fixed;
+    bottom:68px;
+    right: 20px;
+
+  }
+  .tweet{
+    display: flex;
+    padding: 10px;
+    border-bottom: solid rgba(51,51,51,0.3) 1px;
+  }
+  .profile_icon > img{
+    height: 40px;
+    width: 45px;
+    border-radius: 50%;
+    border: solid white 3px;
+  }
+  .flex_right{
+    padding-left: 10px;
+  }
+  .flex_right_top{
+    display: flex;
+    font-size: 14px;
+    margin-bottom:5px;
+  }
+  .flex_right_top > h2{
+    font-weight: 600;
+  }
+  .flex_right_top > p{
+    margin-left: 10px;
+    color: rgba(51,51,51,0.6);
+  }
+  .flex_right > p{
+    padding-bottom: 20px;
+
+  }
+  footer{
+    padding-top: 50px;
+  }
+  #container{
+    height: 55px;
+    width: 100%;
+    border-top: solid rgba(51,51,51,0.3) 1px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  #container > .item > a{
+    padding: 0px 30px;
+    display: block;
+  }
+  #container > .item >a > img{
+    width: 35px;
+    padding: 10px 0px;
+  }
+  input{
+  border: solid rgba(0,0,0,0.6) 1px;
+  border-radius: 10px;
+  padding:5px;
+  }
+  #flex_input{
+    display: flex;
+    margin-bottom: 20px;  
+  }
+  #flex_input > input{
+    width: 80px;
+  }
+
+
+
+
+} /* スマホ用のスタイル -モバイルファースト */
+@media only screen and (max-width: 40em) { 
+
+} /* 最大幅640px、スマホ専用のスタイル */
+/* Medium screens - タブレット */
+@media only screen and (min-width: 40.063em) {
+  h2{
+    color: blue;
+  }
+} /* 最小幅641px、Mediumスクリーン */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  h2{
+    color: blue;
+  }
+} /* 最小幅641pxおよび最大幅1024px、タブレット専用のスタイル */
+/* Large screens - デスクトップ */
+@media only screen and (min-width: 64.063em) { 
+  h2{
+    color: green;
+  }
+} /* 最小幅1025px、Largeスクリーン */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* 最小幅1025pxおよび最大幅1440px、Largeスクリーン専用のスタイル */
+
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) { 
+
+} /* 最小幅1441px、XLargeスクリーン */
+ 
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { /* 最小幅1441pxおよび最大幅1920px、XLargeのスクリーン専用のスタイル */
+
+} 
+ 
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) { /* 最小幅1921px、XXLargeスクリーン */
+
+
+} 
