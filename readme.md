@@ -4,3 +4,10 @@
 
 # profile = ? destination-id
 - profile/profile.php?destination-id=1
+
+
+# フォルダ構成
+- model 関数
+- resource img csv etc..
+- setting const
+- view tpl
