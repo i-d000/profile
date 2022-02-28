@@ -1,5 +1,8 @@
 <?php
+require_once "../const.php";
 //リンクから飛んできた場合の処理
+$_GET["id"] = 2;
+setcookie("id" , 1 , time()+160);
 if(!isset($_GET["id"])){
     header("location:./home.php");
     exit;
@@ -19,7 +22,8 @@ if(isset($_POST["send"])){
     $link = mysqli_connect(HOST , USER_ID ,PASSWORD , DB_NAME);
     mysqli_set_charset($link , 'utf8');
     $message = mysqli_real_escape_string($link , $_POST["message"]);
-    mysqli_query($link , "INSERT INTO direct_message (text , img ,profile_id , destination_profile_id) VALUES('". $message ."', '". $img ."' , ". $_COOKIE["id"] ." , ". $partner_id."");
+    mysqli_query($link , "INSERT INTO direct_message (text , img ,profile_id , destination_profile_id) 
+                            VALUES('". $message ."', '". $img ."' , ". $_COOKIE["id"] ." , ". $partner_id."");
 }
 
 //相手とのメッセージを全件取得してくる処理
@@ -27,13 +31,15 @@ $list = [];
 $link = mysqli_connect(HOST , USER_ID ,PASSWORD , DB_NAME);
 mysqli_set_charset($link , 'utf8');
 $result = mysqli_query($link , "SELECT username FROM profile WHERE id = ". $_COOKIE["id"] ."");
-$user_name = $result;
+$row = mysqli_fetch_assoc($result);
+$user_name = $row["username"];
 $result = mysqli_query($link , "SELECT username FROM profile WHERE id = ". $partner_id ."");
-$partner_name = $result;
-$result = mysqli_query($link , "SELECT  text AS メッセージ , img AS 画像 , profile_id AS 送信者, destination_profile_id 受信者 , img AS 画像
+$row = mysqli_fetch_assoc($result);
+$partner_name = $row["username"];
+$result = mysqli_query($link , "SELECT text AS メッセージ , img AS 画像 , profile_id AS 送信者, destination_profile_id 受信者 , img AS 画像
                                 FROM direct_message
-                                WHERE (profile_id = ". $_COOKIE["id"] ." OR destination_profile_id = ". $_COOKIE["id"] ."
-                                AND (profile_id = ". $partner_id ." OR destionation_profile_id = ".$partner_id."
+                                WHERE (profile_id = ". $_COOKIE["id"] ." OR destination_profile_id = ". $_COOKIE["id"] .")
+                                AND (profile_id = ". $partner_id ." OR destination_profile_id = ".$partner_id.")
                                 ORDER BY created_at DESC");
 while($row = mysqli_fetch_assoc($result)){
     $list[] = $row;
@@ -56,4 +62,5 @@ for($i = 0 ; $i < count($list) ; $i++){
         $list[$i]["name"] = $partner_name;
     }
 }
+require_once "./tpl/personal_message.php";
 ?>
