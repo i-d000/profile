@@ -1,8 +1,6 @@
 <?php
 require_once "../const.php";
 //リンクから飛んできた場合の処理
-$_GET["id"] = 2;
-setcookie("id" , 1 , time()+160);
 if(!isset($_GET["id"])){
     header("location:./home.php");
     exit;
