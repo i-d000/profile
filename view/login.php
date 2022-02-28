@@ -20,8 +20,8 @@
             <form action="" method="post">
                 <ul>
                     <li>
-                        <label class="loginId">ログインID</label>
-                        <input type="text" name="loginId" placeholder="ohs" value="<?php echo htmlspecialchars($displayId, ENT_QUOTES); ?>"><br>
+                        <label class=""></label>
+                        <input type="" name="" placeholder="ohs" value="<?php echo htmlspecialchars($displayId, ENT_QUOTES); ?>"><br>
                     </li>
                     <li>
                         <label class="pass">パスワード</label>
@@ -37,8 +37,8 @@
                 <input type="hidden" name="remember" value="true">
                 <div class="rounded-md shadow-sm -space-y-px">
                     <div>
-                        <label for="email-address" class="sr-only">6桁学籍番号</label>
-                        <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Login ">
+                        <label for="loginId" class="sr-only">ログインID</label>
+                        <input id="email-address" name="loginId" type="text" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Login ">
                     </div>
                     <div>
                         <label for="password" class="sr-only">Password</label>
