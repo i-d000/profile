@@ -43,7 +43,7 @@
       </div>
       <?php } ?>
     </div>
-  </main>
+  </main> 
 
   <footer>
     <div id="container">
