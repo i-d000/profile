@@ -38,7 +38,7 @@ $result = mysqli_query($link , "SELECT text AS メッセージ , img AS 画像 ,
                                 FROM direct_message
                                 WHERE (profile_id = ". $_COOKIE["id"] ." OR destination_profile_id = ". $_COOKIE["id"] .")
                                 AND (profile_id = ". $partner_id ." OR destination_profile_id = ".$partner_id.")
-                                ORDER BY created_at DESC");
+                                ORDER BY created_at ASC");
 while($row = mysqli_fetch_assoc($result)){
     $list[] = $row;
 }
