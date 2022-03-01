@@ -50,7 +50,6 @@ for($i = 0 ; $i < count($list) ; $i++){
         $list[$i]["画像"] = '<p><img src="./img/'. $list[$i]["画像"] .'" alt="画像"';
     }
     //使用者から相手に送ったメッセージ
-    if($list[$i]["画像"] != "")
     if($list[$i]["送信者"] == $_COOKIE["id"]){
         $list[$i]["position"] = "me";
         $list[$i]["name"] = $user_name;
