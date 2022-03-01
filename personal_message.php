@@ -21,7 +21,7 @@ if(isset($_POST["send"])){
     mysqli_set_charset($link , 'utf8');
     $message = mysqli_real_escape_string($link , $_POST["message"]);
     mysqli_query($link , "INSERT INTO direct_message (text , img ,profile_id , destination_profile_id) 
-                            VALUES('". $message ."', '". $img ."' , ". $_COOKIE["id"] ." , ". $partner_id."");
+                            VALUES('". $message ."', '". $img ."' , ". $_COOKIE["id"] ." , ". $partner_id.")");
 }
 
 //相手とのメッセージを全件取得してくる処理
