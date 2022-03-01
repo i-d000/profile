@@ -31,7 +31,7 @@
 
         <?php foreach ($table as $value): ?>
           <div class="person">
-            <a href="#">
+            <a href="">
               <img src="img/<?php echo $value['id'] ?>.png" alt="<?php echo $value['name']?>">
               <p><?php echo $value['name'] ?></p>
             </a>
