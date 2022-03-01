@@ -15,6 +15,7 @@ $passStr = '';
 $genereatePass = '';
 $displayId = '';
 $msg = '';
+var_dump($_COOKIE);
 require_once "setting/const.php";
 // -ログインボタンが押された場合-
 if (isset($_POST['btn']) && $_POST['btn'] === 'login') {
@@ -57,6 +58,8 @@ if (isset($_POST['btn']) && $_POST['btn'] === 'login') {
         if ($hashPass === $genereatePass) {
             // セッションを作成
             setcookie("id", $id, time() + 60 * 60 * 24 * 30);
+            header('Location:home.php');
+            exit;
         } else {
             // ---組み合わせが正しくなかった場合---
             $displayId = $_POST['loginId'];
