@@ -9,6 +9,8 @@ if (isset($_POST['search'])) {
   $search = $_POST['search'];
 }
 
+//ああああああああ
+
 // if (!isset($_COOKIE['id'])) {
 //   header("location:login.php");
 // }else {
