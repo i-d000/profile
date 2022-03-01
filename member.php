@@ -27,5 +27,5 @@
     //idから学科、
   // }
 
-  include 'tpl/member.php';
+  include 'view/member.php';
   exit;
