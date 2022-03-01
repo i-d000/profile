@@ -1,4 +1,5 @@
 /node_modules/
 /src/
 /.vscode/
-/resource/img/
+/resource/img
+/resource/uploaded/
