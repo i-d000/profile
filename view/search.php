@@ -31,7 +31,11 @@
 
         <?php foreach ($table as $value): ?>
           <div class="person">
+<<<<<<< HEAD
             <a href="profile.php?id=<?php echo $value['id'] ?>">
+=======
+            <a href="">
+>>>>>>> aff271fcdf11d4c4ffe7031676f4dd79c10ea5cb
               <img src="img/<?php echo $value['id'] ?>.png" alt="<?php echo $value['name']?>">
               <p><?php echo $value['name'] ?></p>
             </a>
