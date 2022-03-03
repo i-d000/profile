@@ -35,9 +35,28 @@
 
       <?php for($i = 0;$i < $15;$i++){?> 
       <div class="person">
-          <a href="./profile.php?id=<?php echo $table['id']; ?>">
-            <img src="./resource/image/<?php echo$table['id']; ?>.jpg" alt="アイコン画像">
-            <p><?php echo $table['name']; ?></p>
+          <a href="./profile.php?id=<?php echo $student['id']; ?>">
+            <img src="./resource/image/<?php echo$student['id']; ?>.jpg" alt="アイコン画像">
+            <p><?php echo $student['name']; ?></p>
+          </a>
+        </div>
+      </div>
+      <?php } ?>
+    </div>
+
+    <div class="category_box">
+      <div class="flex_text">
+        <h3>クラスの先生</h3>
+        <a href="./search.php"><p>もっと見る</p></a>
+      </div>
+
+      <div class="flex_members">
+
+      <?php for($i = 0;$i < $5;$i++){?> 
+      <div class="person">
+          <a href="./profile.php?id=<?php echo $teacher['id']; ?>">
+            <img src="./resource/image/<?php echo$teacher['id']; ?>.jpg" alt="アイコン画像">
+            <p><?php echo $teacher['name']; ?></p>
           </a>
         </div>
       </div>
