@@ -1,4 +1,5 @@
 /node_modules/
 /src/
-*.json
-
+/.vscode/
+/resource/img
+/resource/uploaded/

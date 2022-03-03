@@ -15,7 +15,7 @@ function getProfile($cookie_id)
 function getTweets($cookie_id)
 {
     $link = pdoConnect();
-    $tweets = $link->query('SELECT * FROM tweet WHERE profile_id =' . $cookie_id);
+    $tweets = $link->query("SELECT * FROM tweet WHERE profile_id = $cookie_id ORDER BY created_at DESC");
     $tweets->execute();
     $link = null;
     return $tweets->fetchAll(PDO::FETCH_NAMED);
@@ -27,9 +27,10 @@ function getTweets($cookie_id)
 function updateProfile(array $POST)
 {
     $link = pdoConnect();
-    $sql = "UPDATE profile SET password = :password , comment = :comment WHERE id = :id";
+    $sql = "UPDATE profile SET comment = :comment WHERE id = :id";
+    // password = :password ,
     $data = $link->prepare($sql);
-    $data->bindValue(':password', $POST['password'], PDO::PARAM_STR);
+    // $data->bindValue(':password', $POST['password'], PDO::PARAM_STR);
     $data->bindValue(':comment', $POST['comment'], PDO::PARAM_STR);
     $data->bindValue(':id', $POST['id'], PDO::PARAM_STR);
     $data->execute();

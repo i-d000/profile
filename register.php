@@ -27,11 +27,11 @@ if (isset($_POST['uploard']) && $_POST['uploard'] === 'uploard') {
       $msg = 'CSVファイルのみ対応しています。';
     } else {
       //ファイルをdataディレクトリに移動
-      if (move_uploaded_file($file_tmp_name, "./uploaded/" . $file_name)) {
+      if (move_uploaded_file($file_tmp_name, "./resource/uploaded/" . $file_name)) {
         //後で削除できるように権限を644に
-        chmod("./uploaded/" . $file_name, 0644);
+        chmod("./resource/uploaded/" . $file_name, 0644);
         $msg = $file_name . "をアップロードしました。";
-        $file = './uploaded/' . $file_name;
+        $file = './resource/uploaded/' . $file_name;
         $fp   = fopen($file, "r");
         //配列に変換する
         while (($data = fgetcsv($fp)) !== FALSE) {
